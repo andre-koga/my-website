@@ -38,6 +38,11 @@ const projects = [
       "The continuation of the Numerus project. I might finish it one day.",
     link: "https://nu.andrekoga.com/",
   },
+  {
+    name: "Learn Android Studio",
+    description: "Step by step guide to learn Android Studio.",
+    link: "https://learn-android-studio.vercel.app/",
+  },
 ];
 
 const navigationLinks = [

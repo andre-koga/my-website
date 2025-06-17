@@ -23,6 +23,9 @@ export default function RootLayout({
       <body className={`${manrope.variable} antialiased`}>
         <Rain />
         {children}
+        <p className="absolute right-4 bottom-4 text-xs text-zinc-600">
+          {"Made with <3 by André Koga • 2025"}
+        </p>
       </body>
     </html>
   );

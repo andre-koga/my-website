@@ -22,22 +22,22 @@ const projects = [
     description: "One of my annual portfolio iterations, made in 2023.",
     link: "https://done-alpha.vercel.app/",
   },
+  // {
+  //   name: "koga.one",
+  //   description: "An old blog of mine that still works.",
+  //   link: "https://next-koga.vercel.app/",
+  // },
   {
-    name: "koga.one",
-    description: "An old blog of mine that still works.",
-    link: "https://next-koga.vercel.app/",
-  },
-  {
-    name: "Numerus v1",
+    name: "Numerus",
     description: "A quirky and esoteric fun-facts app about numbers.",
     link: "https://numerus.vercel.app/",
   },
-  {
-    name: "Numerus v2",
-    description:
-      "The continuation of the Numerus project. I might finish it one day.",
-    link: "https://nu.andrekoga.com/",
-  },
+  // {
+  //   name: "Numerus v2",
+  //   description:
+  //     "The continuation of the Numerus project. I might finish it one day.",
+  //   link: "https://nu.andrekoga.com/",
+  // },
   {
     name: "Learn Android Studio",
     description: "Step by step guide to learn Android Studio.",
@@ -45,10 +45,7 @@ const projects = [
   },
 ];
 
-const navigationLinks = [
-  { href: "/projects", label: "Projects" },
-  { href: "/", label: "Go Back" },
-];
+const navigationLinks = [{ href: "/", label: "Go Back" }];
 
 export default function Archive() {
   return (

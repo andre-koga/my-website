@@ -20,21 +20,8 @@
 }
 
 body {
+  margin: 0;
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-manrope);
-}
-
-/* Rain animation */
-@keyframes fall {
-  0% {
-    transform: translateY(-100vh) translateX(-10vw) rotate(-10deg);
-  }
-  100% {
-    transform: translateY(110vh) translateX(10vw) rotate(-10deg);
-  }
-}
-
-.raindrop {
-  animation: fall linear infinite;
 }

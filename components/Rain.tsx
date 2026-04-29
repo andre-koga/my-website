@@ -19,7 +19,7 @@ interface DustParticle {
 
 const clamp = (value: number, min: number, max: number) =>
   Math.max(min, Math.min(max, value));
-const PARTICLE_COUNT = 300;
+const PARTICLE_COUNT = 100;
 const FADE_IN_DURATION = 1.2;
 const FADE_OUT_DURATION = 1.8;
 const MAX_STEP = 0.045;

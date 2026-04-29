@@ -12,9 +12,18 @@ const funnelDisplay = Funnel_Display({
 const socialLinks = [
   { name: "GitHub", href: "https://github.com/andre-koga" },
   { name: "LinkedIn", href: "https://www.linkedin.com/in/andrehkoga/" },
+  { name: "Archive", href: "/archive" },
+  { name: "Experience", href: "/experience" },
 ];
 
 const projects = [
+  {
+    name: "Upwards",
+    description:
+      "Offline & mobile-first PWA productivity app with time tracking, journaling, and other features",
+    href: "https://upwards.vercel.app/",
+    image: "/upwards.png",
+  },
   {
     name: "NOIC",
     description:
@@ -27,13 +36,6 @@ const projects = [
     description: "Catalog of programming languages and their core features.",
     href: "https://code-party-dev.vercel.app/",
     image: "/codeparty.png",
-  },
-  {
-    name: "Upwards",
-    description:
-      "Offline & mobile-first PWA productivity app with time tracking, journaling, and other features",
-    href: "https://upwards.vercel.app/",
-    image: "/upwards.png",
   },
   {
     name: "Flux Slides",
@@ -165,11 +167,7 @@ export default function Home() {
       </section>
 
       <section className="mt-8">
-        <div
-          className="overflow-hidden pr-4 pb-8 pl-1"
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
-        >
+        <div className="overflow-hidden pr-4 pb-8 pl-1">
           <div
             className={`flex ${
               withTransition ? "transition-transform duration-700 ease-out" : ""
@@ -188,6 +186,8 @@ export default function Home() {
                   href={project.href}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onMouseEnter={() => setIsPaused(true)}
+                  onMouseLeave={() => setIsPaused(false)}
                   className="block aspect-1/2 overflow-hidden rounded-2xl border border-zinc-800 transition hover:scale-95 hover:border-zinc-600"
                 >
                   <article className="relative flex h-full flex-col justify-end overflow-hidden rounded-xl">
@@ -221,14 +221,6 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <ul className="mb-16 flex flex-wrap gap-6 px-2 text-lg text-zinc-300 sm:justify-end sm:text-xl md:pr-4">
-          <Link
-            href="/archive"
-            className="underline-offset-4 transition hover:text-zinc-100 hover:underline"
-          >
-            My archived projects
-          </Link>
-        </ul>
       </section>
     </main>
   );

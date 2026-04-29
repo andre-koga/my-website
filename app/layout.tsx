@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${manrope.variable} antialiased`}>
-        <Rain />
+        {/* <Rain /> */}
         {children}
         <footer className="bg-zinc-900 text-sm">
           <p className="pt-40 pb-20 text-center">

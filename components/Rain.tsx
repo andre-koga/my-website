@@ -6,6 +6,7 @@ interface Raindrop {
   id: number;
   x: number;
   y: number;
+  height: number;
   delay: number;
   duration: number;
   opacity: number;
@@ -24,6 +25,7 @@ export default function Rain() {
           id: i,
           x: Math.random() * 100, // Random x position (%)
           y: -(50 + Math.random() * 100), // Start above screen
+          height: 20 + Math.random() * 30, // Random height
           delay: Math.random() * 5, // Random delay (seconds)
           duration: 1 + Math.random() * 2, // Random duration (1-3 seconds)
           opacity: 0.3 + Math.random() * 0.4, // Random opacity (0.3-0.7)
@@ -44,7 +46,7 @@ export default function Rain() {
           style={{
             left: `${drop.x}%`,
             top: `${drop.y}px`, // Start above screen
-            height: `${20 + Math.random() * 30}px`, // Random height
+            height: `${drop.height}px`,
             opacity: drop.opacity,
             animationDelay: `${drop.delay}s`,
             animationDuration: `${drop.duration}s`,

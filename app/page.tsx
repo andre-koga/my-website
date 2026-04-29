@@ -162,8 +162,8 @@ export default function Home() {
             <li key={link.name}>
               <Link
                 href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
+                target={link.href.startsWith("http") ? "_blank" : undefined}
+                rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
                 className="underline-offset-4 transition hover:text-zinc-100 hover:underline"
               >
                 {link.name}

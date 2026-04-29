@@ -56,6 +56,13 @@ export default function Home() {
   const [withTransition, setWithTransition] = useState(true);
   const [isPaused, setIsPaused] = useState(false);
   const [visibleCards, setVisibleCards] = useState(2);
+  const pauseOnHover = () => {
+    if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+      setIsPaused(true);
+    }
+  };
+
+  const resumeFromHover = () => setIsPaused(false);
 
   const loopedProjects = [...projects, ...projects.slice(0, visibleCards)];
 
@@ -186,8 +193,8 @@ export default function Home() {
                   href={project.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  onMouseEnter={() => setIsPaused(true)}
-                  onMouseLeave={() => setIsPaused(false)}
+                  onMouseEnter={pauseOnHover}
+                  onMouseLeave={resumeFromHover}
                   className="block aspect-1/2 overflow-hidden rounded-2xl border border-zinc-800 transition hover:scale-95 hover:border-zinc-600"
                 >
                   <article className="relative flex h-full flex-col justify-end overflow-hidden rounded-xl">
